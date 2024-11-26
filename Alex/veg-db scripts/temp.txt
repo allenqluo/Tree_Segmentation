@@ -1,0 +1,26 @@
+########### SIMPLE CODE
+with plotevents as (
+SELECT DISTINCT "plotID", MIN("eventID") AS "eventID" FROM neonveg.vst_apparentindividual WHERE "siteID"='HARV' GROUP BY "plotID"
+) SELECT CONCAT(plotevents."plotID",'_',plotevents."eventID") from plotevents;
+
+## WORKING FOR FILTERING DATA CODE
+with plotevents as (
+SELECT DISTINCT "plotID", MIN("eventID") AS "eventID" FROM neonveg.vst_apparentindividual WHERE "siteID"='HARV' GROUP BY "plotID"
+) SELECT  plotevents.*, nv.* FROM plotevents LEFT JOIN neonveg.vst_apparentindividual AS nv ON CONCAT(plotevents."plotID",'_',plotevents."eventID")=CONCAT(nv."plotID",'_',nv."eventID");
+
+
+
+// CONCAT(plotevents."plotID",'_',plotevents."eventID") as "key",
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,84 @@
+-- create appidv table
+CREATE TABLE neonveg.vst_apparentindividual(
+   "uid"                           VARCHAR(36) NOT NULL PRIMARY KEY
+  ,"namedLocation"                 VARCHAR(21) NOT NULL
+  ,"date"                          DATE  NOT NULL
+  ,"eventID"                       VARCHAR(13) NOT NULL
+  ,"domainID"                      VARCHAR(3) NOT NULL
+  ,"siteID"                        VARCHAR(4) NOT NULL
+  ,"plotID"                        VARCHAR(8) NOT NULL
+  ,"individualID"                  VARCHAR(25) NOT NULL
+  ,"tempStemID"                    VARCHAR(25)
+  ,"tagStatus"                     VARCHAR(50)
+  ,"growthForm"                    VARCHAR(50)
+  ,"plantStatus"                   VARCHAR(50)
+  ,"stemDiameter"                  NUMERIC(5,1)
+  ,"measurementHeight"             NUMERIC(5,1)
+  ,"changedMeasurementLocation"    VARCHAR(30)
+  ,"height"                        NUMERIC(5,1)
+  ,"baseCrownHeight"               NUMERIC(5,1)
+  ,"breakHeight"                   NUMERIC(5,1)
+  ,"breakDiameter"                 NUMERIC(5,1)
+  ,"maxCrownDiameter"              NUMERIC(5,1)
+  ,"ninetyCrownDiameter"           NUMERIC(5,1)
+  ,"canopyPosition"                VARCHAR(75)
+  ,"shape"                         VARCHAR(75)
+  ,"basalStemDiameter"             NUMERIC(5,1)
+  ,"basalStemDiameterMsrmntHeight" NUMERIC(5,1)
+  ,"maxBaseCrownDiameter"          NUMERIC(5,1)
+  ,"ninetyBaseCrownDiameter"       NUMERIC(5,1)
+  ,"dendrometerInstallationDate"   DATE 
+  ,"initialGapMeasurementDate"     DATE 
+  ,"initialBandStemDiameter"       NUMERIC(5,1)
+  ,"initialDendrometerGap"         NUMERIC(5,1)
+  ,"dendrometerHeight"             NUMERIC(5,1)
+  ,"dendrometerGap"                NUMERIC(5,1)
+  ,"dendrometerCondition"          VARCHAR(10)
+  ,"bandStemDiameter"              NUMERIC(5,1)
+  ,"remarks"                       VARCHAR(900)
+  ,"recordedBy"                    VARCHAR(75)
+  ,"measuredBy"                    VARCHAR(75)
+  ,"dataEntryRecordID"             VARCHAR(75)
+  ,"dataQF"                        VARCHAR(40)
+);
+
+-- mapping and tagging table
+CREATE TABLE neonveg.vst_mappingandtagging(
+   "uid"                        VARCHAR(36) NOT NULL PRIMARY KEY
+  ,"namedLocation"              VARCHAR(21) NOT NULL
+  ,"date"                       VARCHAR(15)  NOT NULL
+  ,"eventID"                    VARCHAR(13) NOT NULL
+  ,"domainID"                   VARCHAR(3) NOT NULL
+  ,"siteID"                     VARCHAR(4) NOT NULL
+  ,"plotID"                     VARCHAR(10) NOT NULL
+  ,"subplotID"                  VARCHAR(8)
+  ,"nestedSubplotID"            VARCHAR(8)
+  ,"pointID"                    VARCHAR(8) 
+  ,"stemDistance"               NUMERIC(5,1)
+  ,"stemAzimuth"                NUMERIC(5,1)
+  ,"recordType"                 VARCHAR(11)
+  ,"individualID"               VARCHAR(25) NOT NULL
+  ,"supportingStemIndividualID" VARCHAR(50)
+  ,"previouslyTaggedAs"         VARCHAR(50)
+  ,"samplingProtocolVersion"    VARCHAR(250)
+  ,"taxonID"                    VARCHAR(20)
+  ,"scientificName"             VARCHAR(100)
+  ,"taxonRank"                  VARCHAR(75)
+  ,"identificationReferences"   TEXT
+  ,"morphospeciesID"            VARCHAR(75)
+  ,"morphospeciesIDRemarks"     VARCHAR(161)
+  ,"identificationQualifier"    VARCHAR(50)
+  ,"remarks"                    TEXT
+  ,"measuredBy"                 VARCHAR(75)
+  ,"recordedBy"                 VARCHAR(75)
+  ,"dataQF"                     VARCHAR(50)
+);
+
+
+
+
+
+
+
+
+
